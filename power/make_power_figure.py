@@ -4,12 +4,6 @@ from scipy.stats import binom
 
 
 def make_power_figure(n_grid, power, target_power=None):
-    """
-    Собираем plotly-figure с:
-    - красной пунктирной линией мощности;
-    - белой пунктирной вертикальной линией минимального N;
-    - кастомным hover.
-    """
     # минимальный размер выборки, при котором мощность >= целевой
     min_n = None
     if target_power is not None:
