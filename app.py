@@ -18,7 +18,7 @@ def main():
         alpha = st.slider("α (уровень значимости)", 0.001, 0.2, 0.05, 0.001)
         target_power = st.slider("Целевая мощность", 0.1, 0.99, 0.8, 0.01)
         n_max = st.number_input("Размер выборки N",  2, 20000, 500, step=30)
-    n_grid = np.arange(0, n_max + 1, 10)
+    n_grid = np.arange(0, n_max + 1, 1)
     power = get_stat_power(n_grid, p0, p1, alpha)
 
     fig, min_n = make_power_figure(n_grid, power, target_power)
